@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreshMart Admin | Central Inventory CRUD Desk</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/checkout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
         .admin-layout { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 400px 1fr; gap: 40px; }
@@ -89,8 +89,8 @@
         </section>
     </main>
 
-    <script src="../data/products.js"></script>
-    <script src="../js/storage.js"></script>
+    <script src="data/products.js"></script>
+    <script src="js/storage.js"></script>
     <script>
         if (!localStorage.getItem('freshmart_db_products')) {
             localStorage.setItem('freshmart_db_products', JSON.stringify(typeof productsData !== 'undefined' ? productsData : []));
