@@ -1,0 +1,157 @@
+/* Card Container Framing Alignment Wrapper */
+.details-wrapper {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.details-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    width: 100%;
+    max-width: 950px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 40px;
+}
+
+/* Graphic Presentation Window */
+.image-showcase {
+    background: #fcfdfd;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+    border: 1px solid var(--border-color);
+    min-height: 350px;
+}
+
+/* Meta Content Alignment Structure block */
+.info-showcase {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-badge {
+    align-self: start;
+    background: var(--brand-light-green);
+    color: var(--brand-dark-green);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.info-showcase h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.detail-unit {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.detail-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--brand-dark-green);
+    margin-bottom: 20px;
+}
+
+.detail-desc {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Counter Metric Inputs Component UI */
+.quantity-controller {
+    display: inline-flex;
+    align-items: center;
+    background: #f3f4f6;
+    border-radius: 8px;
+    padding: 4px;
+    margin-bottom: 30px;
+    width: fit-content;
+}
+
+.quantity-controller button {
+    background: #ffffff;
+    border: none;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.quantity-controller button:hover {
+    background: var(--brand-light-green);
+    color: var(--brand-green);
+}
+
+#quantity-val {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 20px;
+    min-width: 50px;
+    text-align: center;
+}
+
+/* Call to action element layout grids */
+.action-buttons-row {
+    display: flex;
+    gap: 15px;
+}
+
+.add-to-cart-btn {
+    flex: 2;
+    background: var(--brand-green);
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.add-to-cart-btn:hover { background: var(--brand-dark-green); }
+
+.add-to-wishlist-btn {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    color: var(--text-dark);
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.add-to-wishlist-btn:hover {
+    border-color: #9ca3af;
+    background: #f9fafb;
+}

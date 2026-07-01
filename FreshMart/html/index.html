@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshMart | India's Premium Online Grocery Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <span class="logo-icon">🌿</span>
+                <h1 class="logo-text">Local<span>store</span></h1>
+            </div>
+            <div class="search-bar-container">
+                <input type="text" id="global-search" placeholder="Search fresh vegetables, fruits, dairy products...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="user-actions">
+                <a href="profile.html" class="action-item">👤 Account</a>
+                <a href="wishlist.html" class="action-item">❤️ Wishlist (<span id="wishlist-count">0</span>)</a>
+                <a href="cart.html" class="action-item nav-cart">🛒 Cart (<span id="cart-count">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="sub-nav">
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="products.html">Browse Products</a>
+            <a href="orders.html">My Orders</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h2>Get <span class="highlight">free delivery</span> on orders above ₹1,500</h2>
+            <p>Sourced locally, delivered fresh. Skip the crowded market chaos and get farm-fresh items delivered securely directly to your home.</p>
+            <a href="products.html" class="learn-more-btn">Shop Fresh Items ▸</a>
+        </div>
+        <div class="hero-image-placeholder"><div class="floating-basket">🧺</div></div>
+    </section>
+
+    <main class="storefront-body">
+        <div class="section-title-bar">
+            <h2>Featured Products</h2>
+            <div class="filter-controls">
+                <button class="filter-btn active" onclick="filterCategory('all')">All Products</button>
+                <button class="filter-btn" onclick="filterCategory('vegetables')">Vegetables</button>
+                <button class="filter-btn" onclick="filterCategory('fruits')">Fruits</button>
+</div>
+
+        </div>
+        <section class="products-grid" id="featured-grid"></section>
+    </main>
+
+    <script src="../data/products.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>

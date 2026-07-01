@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshMart | Your Shopping Cart</title>
+    <!-- Stepping out of html/ to find global css directory -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Main Store Header Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-area" onclick="location.href='index.html'" style="cursor:pointer">
+                <span class="logo-icon">🌿</span>
+                <h1 class="logo-text">Fresh<span>Mart</span></h1>
+            </div>
+            <h2>Shopping Cart</h2>
+        </div>
+    </header>
+
+    <!-- Two-Column Flexible Layout Grid -->
+    <main class="cart-container-page">
+        
+        <!-- Left Side: Interactive Item Rows Grid Container -->
+        <section class="cart-items-section" id="cart-items-wrapper">
+            <!-- JavaScript dynamically injects products here -->
+        </section>
+        
+        <!-- Right Side: Order Calculation Settlement Summary Sidebar -->
+        <aside class="cart-summary-section">
+            <h3>Order Summary</h3>
+            <div class="summary-line">
+                <span>Subtotal</span>
+                <span>₹<span id="subtotal-val">0.00</span></span>
+            </div>
+            <div class="summary-line">
+                <span>Delivery Charges</span>
+                <span id="delivery-val">₹50.00</span>
+            </div>
+            <hr style="border: none; border-top: 1px solid var(--border-color); margin: 15px 0;">
+            <div class="summary-line total-highlight">
+                <span>Total Amount</span>
+                <span>₹<span id="total-val">0.00</span></span>
+            </div>
+            <button class="checkout-proceed-btn" onclick="location.href='checkout.html'">Proceed to Checkout Securely</button>
+        </aside>
+
+    </main>
+
+    <!-- CRUCIAL FIX: Loads the separate cart.js file invisibly behind the scenes -->
+    <script src="../js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshMart | Browse All Products</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-area" onclick="location.href='index.html'" style="cursor:pointer">
+                <span class="logo-icon">🌿</span><h1 class="logo-text">Fresh<span>Mart</span></h1>
+            </div>
+            <div class="search-bar-container">
+                <input type="text" id="catalog-search" placeholder="Search from thousands of items...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="user-actions">
+                <a href="profile.html" class="action-item">👤 Account</a>
+                <a href="wishlist.html" class="action-item">❤️ Wishlist (<span id="wishlist-count">0</span>)</a>
+                <a href="cart.html" class="action-item nav-cart">🛒 Cart (<span id="cart-count">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="catalog-container">
+        <aside class="sidebar-filters">
+            <h3>Filter Categories</h3>
+            <ul class="filter-list">
+                <li class="active-filter" data-cat="all">All Items</li>
+                <li data-cat="vegetables">Vegetables</li>
+                <li data-cat="fruits">Fruits</li>
+                <!-- Update data-cat here to match your exact form inputs -->
+                <li data-cat="Dairy & Eggs">Dairy & Eggs</li>
+                <li data-cat="staples">Staples & Oils</li>
+            </ul>
+
+            <hr>
+            <h3>Sort By Price</h3>
+            <select id="price-sort">
+                <option value="default">Relevance</option>
+                <option value="low-high">Price: Low to High</option>
+                <option value="high-low">Price: High to Low</option>
+            </select>
+        </aside>
+        
+        <section class="catalog-results">
+            <h2>All Grocery Items</h2>
+            <div class="products-grid" id="catalog-grid"></div>
+        </section>
+    </main>
+
+    <script src="../data/products.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/filter.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/products.js"></script>
+</body>
+</html>

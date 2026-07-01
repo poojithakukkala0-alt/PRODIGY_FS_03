@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshMart | Account Center</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-area" onclick="location.href='index.html'" style="cursor:pointer">
+                <span class="logo-icon">🌿</span><h1 class="logo-text">Fresh<span>Mart</span></h1>
+            </div>
+            <h2>Account Center</h2>
+        </div>
+    </header>
+
+    <nav class="sub-nav">
+        <div class="nav-links">
+            <a href="index.html">🏠 Home</a>
+            <a href="products.html">Browse Products</a>
+            <a href="orders.html">My Orders</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <main class="profile-container" style="max-width: 500px; margin: 50px auto;">
+        <h2 style="margin-bottom: 20px; font-weight: 700; color: var(--brand-dark-green);" id="panel-title">Your Account Settings</h2>
+        
+        <div class="profile-card" style="flex-direction: column; padding: 30px; align-items: stretch; gap: 20px;">
+            
+            <!-- STATE A: Active Logged In Dashboard View -->
+            <div id="logged-in-state" style="display: none; width: 100%;">
+                <div style="display: flex; align-items: center; gap: 25px; margin-bottom: 20px;">
+                    <div class="avatar-large" style="margin: 0; width: 80px; height: 80px; font-size: 3rem;">👤</div>
+                    <div>
+                        <p style="margin: 0; font-size: 1.1rem;"><strong><span id="profile-display-name">User</span></strong></p>
+                        <p style="margin: 4px 0 0; color: var(--text-muted); font-size: 0.9rem;" id="profile-display-email">email@domain.com</p>
+                    </div>
+                </div>
+                <hr style="border: none; border-top: 1px solid var(--border-color); margin-bottom: 20px;">
+                <p style="font-size: 0.95rem; margin-bottom: 12px;"><strong>Account Status:</strong> <span style="color:var(--brand-green); font-weight:600;">Active Premium Member</span></p>
+                <p style="font-size: 0.95rem; margin-bottom: 25px;"><strong>Primary Region:</strong> India Mainland Gateway</p>
+                <button class="logout-btn" onclick="executeLogout()" style="width: 100%; padding: 12px; font-weight: 600;">Sign Out of Account</button>
+            </div>
+
+            <!-- STATE B: Direct Inline Sign-In Form View -->
+            <div id="logged-out-state" style="display: none; width: 100%;">
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; text-align: center;">You are currently signed out. Log in to track orders.</p>
+                <form id="login-form" onsubmit="handleAuthLogin(event)">
+                    <div class="auth-group">
+                        <label>Email Address</label>
+                        <input type="email" id="login-email" required placeholder="name@domain.com">
+                    </div>
+                    <div class="auth-group">
+                        <label>Password</label>
+                        <input type="password" id="login-password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="auth-action-btn" style="margin-top: 10px;">Sign In Securely</button>
+                </form>
+                <p class="auth-toggle" style="margin-top: 20px; text-align: center;">New here? <a href="register.html" style="color: var(--brand-green); font-weight:600; text-decoration: none;">Create an Account</a></p>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="../js/auth.js"></script>
+</body>
+</html>

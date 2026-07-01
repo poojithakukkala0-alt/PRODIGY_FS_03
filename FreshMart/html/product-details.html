@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshMart | Product Details</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/product-details.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-area" onclick="location.href='index.html'" style="cursor:pointer">
+                <span class="logo-icon">🌿</span><h1 class="logo-text">Fresh<span>Mart</span></h1>
+            </div>
+            <div class="user-actions">
+                <a href="products.html" class="action-item">⬅ Continue Shopping</a>
+                <a href="cart.html" class="action-item nav-cart">🛒 Cart (<span id="cart-count">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="details-wrapper">
+        <div class="details-card" id="product-detail-view">
+            <div class="image-showcase" id="detail-emoji">🥑</div>
+            <div class="info-showcase">
+                <span class="detail-badge" id="detail-badge">Organic</span>
+                <h2 id="detail-title">Premium Quality Item</h2>
+                <p class="detail-unit" id="detail-unit">Pack Size: 1 Unit</p>
+                <p class="detail-price">Price: <span id="detail-price">₹0</span></p>
+                <p class="detail-desc" id="detail-desc">Loading detailed product description from database coordinates...</p>
+                
+                <div class="quantity-controller">
+                    <button onclick="changeQty(-1)">-</button>
+                    <span id="quantity-val">1</span>
+                    <button onclick="changeQty(1)">+</button>
+                </div>
+                
+                <div class="action-buttons-row">
+                    <button class="add-to-cart-btn" onclick="triggerAddToCart()">Add to Shopping Cart</button>
+                    <button class="add-to-wishlist-btn" onclick="triggerWishlist()">Add to Wishlist</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../data/products.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/product-details.js"></script>
+</body>
+</html>

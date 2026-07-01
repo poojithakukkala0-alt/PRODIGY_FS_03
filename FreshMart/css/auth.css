@@ -1,0 +1,86 @@
+/* Card Container Blueprint centering elements inside document body view */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-light);
+}
+
+.auth-box {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+}
+
+.auth-box h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--brand-dark-green);
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.auth-box p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.auth-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.auth-group input {
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.auth-group input:focus { border-color: var(--brand-green); }
+
+.auth-action-btn {
+    width: 100%;
+    background: var(--brand-dark-green);
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.auth-action-btn:hover { background: var(--brand-green); }
+
+.auth-toggle {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.85rem !important;
+}
+
+.auth-toggle a {
+    color: var(--brand-green);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-toggle a:hover { text-decoration: underline; }

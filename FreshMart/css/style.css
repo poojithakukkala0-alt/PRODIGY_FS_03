@@ -1,0 +1,257 @@
+/* Custom Design Tokens & Variables */
+:root {
+    --brand-green: #10b981;
+    --brand-dark-green: #064e3b;
+    --brand-light-green: #ecfdf5;
+    --text-dark: #1f2937;
+    --text-muted: #6b7280;
+    --bg-light: #f9fafb;
+    --border-color: #f3f4f6;
+    --badge-sale-bg: #ffedd5;
+    --badge-sale-text: #ea580c;
+    --badge-fresh-bg: #eff6ff;
+    --badge-fresh-text: #2563eb;
+    --font-stack: 'Poppins', sans-serif;
+}
+
+/* Global Standard Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-stack);
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* Sticky Main Navigation Header bar */
+.main-header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.logo-icon { font-size: 1.8rem; }
+.logo-text { font-size: 1.5rem; font-weight: 700; color: var(--brand-dark-green); }
+.logo-text span { color: var(--brand-green); }
+
+/* Central Omnibox Search Utility */
+.search-bar-container {
+    display: flex;
+    width: 45%;
+    background: #f3f4f6;
+    border-radius: 30px;
+    padding: 4px 6px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.search-bar-container:focus-within {
+    border-color: var(--brand-green);
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.search-bar-container input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 8px 15px;
+    outline: none;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.search-btn {
+    background: var(--brand-green);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* User Fast Actions Trackers */
+.user-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.user-actions a:hover {
+    color: var(--brand-green);
+}
+
+/* Category Level Subnav Menu bar */
+.sub-nav {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-links {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--brand-green);
+    font-weight: 600;
+}
+
+/* Global Reusable Master Product Grid Layout System */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Premium Dynamic Product Card Design Modules */
+.market-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.market-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.badge-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.product-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+.badge-sale { background: var(--badge-sale-bg); color: var(--badge-sale-text); }
+.badge-fresh { background: var(--badge-fresh-bg); color: var(--badge-fresh-text); }
+.badge-discount { background: #fee2e2; color: #dc2626; }
+
+.wishlist-toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.wishlist-toggle-btn:hover { transform: scale(1.15); }
+
+.img-container {
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    margin-bottom: 15px;
+    background: #fdfdfd;
+    border-radius: 12px;
+}
+
+.item-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+.item-meta {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.card-action-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+.card-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--brand-dark-green);
+}
+
+.add-cart-circle-btn {
+    background: var(--brand-green);
+    color: white;
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.add-cart-circle-btn:hover {
+    background: var(--brand-dark-green);
+    transform: scale(1.05);
+}

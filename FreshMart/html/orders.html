@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshMart | Past Purchase Invoices</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-area" onclick="location.href='index.html'" style="cursor:pointer">
+                <span class="logo-icon">🌿</span><h1 class="logo-text">Fresh<span>Mart</span></h1>
+            </div>
+            <h2>Order History Log</h2>
+        </div>
+    </header>
+
+    <!-- NEW NAVIGATION BAR WITH HOME BUTTON -->
+    <nav class="sub-nav">
+        <div class="nav-links">
+            <a href="index.html">🏠 Home</a>
+            <a href="products.html">Browse Products</a>
+            <a href="orders.html" class="active">My Orders</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <main class="storefront-body" style="max-width: 1000px; margin: 30px auto;">
+        <div id="orders-log-wrapper">
+            <p style="text-align: center; color: #666; padding: 40px;">No historical purchases logged on this device engine state yet.</p>
+        </div>
+    </main>
+
+    <script>
+        window.onload = function() {
+            const orders = localStorage.getItem('freshmart_orders') ? JSON.parse(localStorage.getItem('freshmart_orders')) : [];
+            const container = document.getElementById('orders-log-wrapper');
+            if(orders.length > 0) {
+                container.innerHTML = orders.map(ord => `
+                    <div style="border: 1px solid #eee; background: #fff; padding: 25px; border-radius: 16px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.01); display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h4 style="color:#064e3b; margin-bottom: 6px; font-size:1.1rem;">Order ID: ${ord.id}</h4>
+                            <p style="font-size:0.9rem; color:#666; margin-bottom: 4px;">Total Items Transacted: ${ord.itemsCount}</p>
+                            <p style="font-size:0.9rem; color:#666;">Invoice Valuation Paid: <strong style="color:#10b981; font-size:1rem;">₹${ord.totalValuation}</strong></p>
+                        </div>
+                        <span style="background:#d1fae5; color:#065f46; padding:6px 14px; font-size:0.8rem; font-weight:600; border-radius:30px;">Status: Dispatched & In Transit</span>
+                    </div>
+                `).join('');
+            }
+        }
+    </script>
+</body>
+</html>
